@@ -46,8 +46,8 @@ public class BookRecyclerAdapter extends RecyclerView.Adapter<BookViewHolder> {
     public void onBindViewHolder(BookViewHolder holder, int position) {
         Book book = bookList.get(position);
         holder.titleTv.setText(book.getTitle());
-        String desc = "作者："+book.getAuthor()[0]+"\n副标题:"+book.getSubtitle()
-                +"\n出版年："+book.getPubDate()+"\n页数："+book.getPages()+"\n定价："+book.getPrice();
+        String desc = "作者："+book.getAuthor()[0] +"\n出版年："+book.getPubDate()+
+                "\n页数："+book.getPages()+"\n定价："+book.getPrice();
         holder.descTv.setText(desc);
         holder.bookIv.setImageDrawable(context.getResources().getDrawable(book.getImageId(),null));
 

@@ -2,6 +2,7 @@ package com.yang.materialdesigndemo;
 
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -101,32 +102,32 @@ public class BooksFragment extends Fragment implements OnRecyclerItemClickListen
         books = new ArrayList<>();
         Book book1 = new Book();
         book1.setTitle(getString(R.string.book_title_1));
-        book1.setAuthor(new String[]{"[美] 凯文·凯利"});
+        book1.setAuthor(new String[]{"刘慈欣"});
         book1.setImageId(R.drawable.book1);
-        book1.setSubtitle("全人类的最终命运和结局");
-        book1.setPubDate("2010-12");
-        book1.setPages("456");
-        book1.setPrice("56.00元");
+        book1.setSubtitle(" ");
+        book1.setPubDate("2008-01-01");
+        book1.setPages("302");
+        book1.setPrice("23.00元");
         books.add(book1);
 
         Book book2 = new Book();
         book2.setTitle(getString(R.string.book_title_2));
-        book2.setAuthor(new String[]{"[美] Paul Graham"});
+        book2.setAuthor(new String[]{"刘慈欣"});
         book2.setImageId(R.drawable.book2);
-        book2.setSubtitle("硅谷创业之父Paul Graham文集");
-        book2.setPubDate("2011-4");
-        book2.setPages("264");
-        book2.setPrice("35.00元");
+        book2.setSubtitle("");
+        book2.setPubDate("2008-05-01");
+        book2.setPages("470");
+        book2.setPrice("32.00元");
         books.add(book2);
 
         Book book3 = new Book();
         book3.setTitle(getString(R.string.book_title_3));
-        book3.setAuthor(new String[]{"Bruce A.Tate"});
+        book3.setAuthor(new String[]{"刘慈欣"});
         book3.setImageId(R.drawable.book3);
-        book3.setSubtitle("理解多种编程范型");
-        book3.setPubDate("2012-5-8");
-        book3.setPages("246");
-        book3.setPrice("69.00元");
+        book3.setSubtitle("");
+        book3.setPubDate("2010-11-01");
+        book3.setPages("513");
+        book3.setPrice("38.00元");
         books.add(book3);
 
         adapter.setBookList(books);
@@ -138,7 +139,9 @@ public class BooksFragment extends Fragment implements OnRecyclerItemClickListen
     @Override
     public void OnItemClick(int position) {
 
-        Snackbar.make(recyclerView,"点击"+books.get(position).getTitle(),Snackbar.LENGTH_SHORT).show();
+//        Snackbar.make(recyclerView,"点击"+books.get(position).getTitle(),Snackbar.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(),BookDetailsActivity.class);
+        startActivity(intent);
     }
 
     @Override
