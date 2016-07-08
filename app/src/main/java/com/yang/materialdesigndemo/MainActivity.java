@@ -1,6 +1,8 @@
 package com.yang.materialdesigndemo;
 
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +15,7 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
+    private CoordinatorLayout coordinatorLayout;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private ActionBarDrawerToggle drawerToggle;
@@ -23,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinator_layout);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
 
@@ -39,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.navigation_item_book:
 
+                        getFragmentManager().beginTransaction().replace(
+                                R.id.frame_layout,new BooksFragment()).commit();
+                        toolbar.setTitle(R.string.title_book);
                         break;
                     case R.id.navigation_item_blog:
 
