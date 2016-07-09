@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">MaterialDesignDemo</string>
     <string name="navigation_item_book">书籍</string>
-    <string name="navigation_item_demo">Material Design 控件实例</string>
+    <string name="navigation_item_demo">Material Design 控件</string>
+    <string name="navigation_item_example">Material Design 实例</string>
     <string name="navigation_item_blog">我的博客</string>
     <string name="navigation_item_about">关于</string>
+    <string name="navigation_item_github">我的GitHub</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+
+    <string name="app_description">本APP用来演示Material Design控件的使用</string>
+    <string name="app_github_url">github地址：\nhttps://github.com/yang8218/MaterialDesignDemo</string>
 
     <string name="title_book">书籍</string>
 
@@ -18,7 +23,6 @@
     <string name="book_title_3">三体III死神永生</string>
     <string name="book_description_3">作者: 刘慈欣\n出版年: 2010-11-01\n页数: 513\n定价: 38.00元</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_setting">设置</string>
 
 </resources>
